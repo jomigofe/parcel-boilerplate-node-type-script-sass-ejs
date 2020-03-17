@@ -1,5 +1,5 @@
 import * as dotenv from "dotenv";
-import * as express from "express";
+import express from "express";
 import * as path from "path";
 import * as routes from "./routes";
 
@@ -9,7 +9,7 @@ dotenv.config();
 // port is now available to the Node.js runtime 
 // as if it were an environment variable
 const scheme = process.env.HOST_SCHEME;
-const domain = process.env.HOST_URL;
+const domain = process.env.HOST_DOMAIN;
 const port = process.env.HOST_PORT;
 
 const app = express();
