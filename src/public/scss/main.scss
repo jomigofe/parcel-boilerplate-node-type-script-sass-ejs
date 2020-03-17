@@ -1,0 +1,25 @@
+@import 'normalize';
+@import 'fonts';
+$easing: cubic-bezier(0.175, 0.885, 0.320, 1);
+$time: 0.5s;
+$fontColor: #000;
+$darkColor: #231F20;
+
+@function w($w) {
+	@return $w*100/1920; 
+}
+@function h($w,$h) {
+	@return w($w)/($w/$h);
+}
+
+@mixin v($property, $v) {
+	#{$property}: 100vw*$v/1920;
+}
+@mixin h($property, $v) {
+	#{$property}: $v*100vw/1920;
+}
+
+@mixin wh($w,$h) {
+	width: w($w)*1vw;
+	height: h($w,$h)*1vw;
+}
